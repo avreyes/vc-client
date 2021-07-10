@@ -1,0 +1,16 @@
+.forumpage {
+    padding: 10px;
+}
+
+.forumpage .jumbotron {
+    text-align: center;
+}
+
+.forumpage .card {
+    margin-bottom: 10px;
+}
+
+.forumpage .card-header {
+    color: white;
+    font-weight: bold;
+}
