@@ -1,2 +1,2 @@
-## Landing Page Icon ##
-"https://www.freepik.com" 
+## Zodiac Page Icons ##
+"https://www.flaticon.com/authors/smalllikeart"

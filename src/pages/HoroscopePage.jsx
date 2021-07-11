@@ -1,13 +1,23 @@
-import React from 'react';
 
-export default function HoroscopePage() {
 
-    
+// import React, { Component } from 'react';
+// import Container from '../components/Container';
 
-    return (
-        <>
-        <h1>this is the Horoscope Page</h1>
-        <p>this is the horoscope API</p>
-        </>
-    );
-}
+// class HoroscopePage extends Component {
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             currentSign: 'sagittarius',
+//         }
+//     }
+
+//     render() {
+//         return (
+//             <div className='Horoscopes'>
+//                 <Container currentSign={this.state.currentSign}/>
+//             </div>
+//         );
+//     }
+// }
+
+// export default HoroscopePage;
