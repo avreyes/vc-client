@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.header {
+    font-family: 'Shrikhand';
+    color: rgb(153, 118, 29);
+    font-size: 8em;
+    text-align: center;
+    letter-spacing: 11px;
+    text-shadow: -7px 7px 0 rgba(153, 38, 134, 0.726), 
+                -12px 12px 0 #572796c0, 
+                -17px 17px 0 #a06f54b7;
+}
+
+.card-deck {
+    width: 48%;
+    margin: 50px;
+    margin-left: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    size: 15px;
+}
+
+img {
+    width: 25%;
+    
+}
+
+
