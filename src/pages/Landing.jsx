@@ -1,16 +1,23 @@
-import React from 'react';
-import './HomePage.css';
+import React, { useState } from 'react';
+import './Landing.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+// import HoroscopePage from './HoroscopePage';
+// import UserPage from './UserPage';
+// import ForumPage from './ForumPage';
+
 import solar from '../assets/etc/solar-system.png'
 import horoscope from '../assets/etc/014-horoscope.png'
 import clean from '../assets/etc/clean.png'
 
-import { Card, CardBody, CardImg, CardTitle, CardText } from "reactstrap";
+import { Card, CardBody, CardImg, CardTitle, CardText, Button } from "reactstrap";
 
 const style = {
     height: '30rem'
 };
 
 function LandingPage() {
+
     return (
     <>
     <div className='card-deck'>
@@ -27,6 +34,11 @@ function LandingPage() {
                 lead-in to additional content. This content is a little bit
                 longer.
             </CardText>
+            {/* <Link to='/HoroscopePage'>
+                <Button renderAs='button'>
+                    <span>Daily Horoscope</span>
+                </Button>
+            </Link> */}
             </CardBody>
         </Card>
         <Card style={style}>
@@ -41,6 +53,11 @@ function LandingPage() {
                 This card has supporting text below as a natural lead-in to
                 additional content.
             </CardText>
+            {/* <Link to='/UserPage/:id'>
+                <Button renderAs='button'>
+                    <span>My Profile</span>
+                </Button>
+            </Link> */}
             </CardBody>
         </Card>
         <Card style={style}>
@@ -55,6 +72,11 @@ function LandingPage() {
                 lead-in to additional content. This card has even longer content
                 than the first to show that equal height action.
             </CardText>
+            {/* <Link to='/ForumPage'>
+                <Button renderAs='button'>
+                    <span>Astrology Forum</span>
+                </Button>
+            </Link> */}
             </CardBody>
         </Card>
         </div>

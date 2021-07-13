@@ -4,7 +4,8 @@ class Aztro extends Component {
     constructor(props){
         super(props);
         this.state = {
-          json: {}
+          json: {},
+          sign: ['aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo', 'libra', 'pisces', 'agittarius', 'scorpio', 'taurus', 'virgo']
         }
     }
 

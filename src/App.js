@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Auth from './auth/Auth';
 import './App.css';
 import Sitebar from './home/Sitebar';
+import Paths from './Paths';
 import LandingPage from './pages/Landing';
+import PostsIndex from './Posts/PostsIndex';
+
 
 
 export default function App() {
@@ -14,7 +17,7 @@ export default function App() {
           setSessionToken(localStorage.getItem('token'));
           console.log('token', sessionToken)
       }
-  }, [])
+  }, [sessionToken])
 
   const updateToken = (newToken) => {
       localStorage.setItem('token', newToken);
@@ -37,6 +40,7 @@ export default function App() {
     <React.Fragment>
       <Sitebar clickLogout={clearToken}/>
       {protectedViews()}
+      
     </React.Fragment>
   );
 }

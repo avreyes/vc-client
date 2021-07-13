@@ -1,5 +1,6 @@
 import React from 'react';
 //import { useParams } from 'react-router-dom';
+import  PostsIndex from '../Posts/PostsIndex';
 
 
 
@@ -9,8 +10,7 @@ export default function UserPage() {
 
     return (
         <>
-        <h1>this is the user page</h1>
-        <p>this is the user stuff</p>
+        <PostsIndex />
         
         </>
     );
