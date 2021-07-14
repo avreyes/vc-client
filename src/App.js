@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Auth from './auth/Auth';
 import './App.css';
+//import Landing from './pages/Landing';
+import UserPage from './pages/UserPage';
+import ForumPage from './pages/ForumPage';
+import HoroscopePage from './pages/HoroscopePage';
 import Sitebar from './home/Sitebar';
-import Paths from './Paths';
-import LandingPage from './pages/Landing';
-import PostsIndex from './Posts/PostsIndex';
+// import Index from './index';
 
 
 
@@ -32,15 +35,31 @@ export default function App() {
   }
 
   const protectedViews = () => {
-    return (sessionToken === localStorage.getItem('token') ? <LandingPage token={sessionToken} />
+    return (sessionToken === localStorage.getItem('token') ? <UserPage token={sessionToken} />
     : <Auth updateToken={updateToken} />)
   }
 
   return (
-    <React.Fragment>
+    <>
       <Sitebar clickLogout={clearToken}/>
-      {protectedViews()}
+        {protectedViews()}
+      {/* <Switch> */}
+
+        {/* <Route exact path='/Landing'
+                render={props => {
+                  <Landing {...props} title={`Landing`}/>
+                }} /> */}
+        {/* <Route exact path='ForumPage'
+                render={props => {
+                  <ForumPage {...props} title={`Forum Page`}/>
+                }} />
+        <Route exact path='/UserPage/:id'
+                render={props => {
+                  <UserPage {...props} title={`User Page`}/>
+                }} />
+        <Route exact path='/HoroscopePage' component={HoroscopePage}/>
+      </Switch>  */}
       
-    </React.Fragment>
+    </>
   );
 }

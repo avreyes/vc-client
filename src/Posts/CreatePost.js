@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Collapse } from 'reactstrap';
 
 const CreatePost = (props) => {
     const [title, setTitle] = useState('');
@@ -25,13 +25,19 @@ const CreatePost = (props) => {
             setDate('');
             setSign('');
             setEntry('');
-            props.fetchPosts();
+            //props.fetchPosts();
         }) 
     }
 
+const [isOpen, setIsOpen] = useState(false);
+
+const toggle = () => setIsOpen(!isOpen);
+
     return (
         <>
-            <h3>Create a new Horoscope Post</h3>
+        <div>
+            <Button color='dark' onClick={toggle} style={{ marginBottom: '1rem' }}>Create Post</Button>
+            <Collapse isOpen={isOpen}>
             <Form onSubmit={ handleSubmit }>
                 <FormGroup>
                     <Label htmlFor='title' />
@@ -64,6 +70,8 @@ const CreatePost = (props) => {
                 </FormGroup>
                 <Button type='submit'>Post!</Button>
             </Form>
+            </Collapse>
+            </div>
         </>
     )
 }

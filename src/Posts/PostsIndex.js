@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import styled from 'styled-components';
 import '../pages/ForumPage.css';
+//import CreatePost from './CreatePost';
 
 class PostsIndex extends Component {
 
@@ -23,16 +24,12 @@ class PostsIndex extends Component {
         .then(json => this.setState({ posts: json }))
     }
 
-    render () {
+    render (props) {
         const { posts } = this.state;
         return (
             <div className='container'>
                 <div class='jumbotron'>
                     <h1 class='display-4'>Forum Posts</h1>
-                </div>
-                <div class='jumbotron'>
-                    <h2 class='display-4'>Create a New Post</h2>
-                    
                 </div>
                 { posts.map((post) => (
                     <div className='card' key={ post.id }>

@@ -12,6 +12,7 @@ const Login = (props) => {
             body: JSON.stringify({user:{email: email, password: password}}),
             headers: new Headers({
                 'Content-Type': 'application/json'
+                
             })
         }).then(
             (response) => response.json()

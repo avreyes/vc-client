@@ -7,9 +7,12 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    Button
+    Button,
 } from 'reactstrap';
 import LandingPage from '../pages/Landing';
+import ForumPage from '../pages/ForumPage';
+import UserPage from '../pages/UserPage';
+import HoroscopePage from '../pages/HoroscopePage';
 
 
 
@@ -30,34 +33,33 @@ const Sitebar = (props) => {
     return (
         <Navbar color='faded' light expand='md'>
             <NavbarBrand>Vibe Check</NavbarBrand>
-            <NavbarToggler onClick={toggle}/>
-            <Collapse isOpen={isOpen} navbar>
-                <Nav className='ml-auto' navbar>
-                    <Router>
-                        <NavbarBrand>
+            {/* <NavbarToggler onClick={toggle}/>
+            <Collapse isOpen={isOpen} navbar> */}
+            <Nav className='ml-auto' navbar>
+                {/* <NavbarBrand>
                             <Link to='/Landing'>Home</Link>
-                        </NavbarBrand>
-                        <NavbarBrand>
-                            <Link to='/PostsIndex'>Horoscope Forum</Link>
-                        </NavbarBrand>
-                        <NavbarBrand>
-                            <Link to='/UserProfile'>Profile</Link>
-                        </NavbarBrand>
-                        <NavbarBrand>
-                            <Link to='/DailyHoroscope'>Daily Horoscope</Link>
-                        </NavbarBrand>
-                        <NavItem>
-                        <Button onClick={props.clickLogout}>Logout</Button>
-                        </NavItem>
-                            <Switch>
-                                <Route exact path='/Landing'
-                                        render={props => {
-                                            <LandingPage {...props} title={`Landing Page`}/>
-                                        }} />
-                            </Switch>
-                    </Router>
-                </Nav>
-            </Collapse>
+                        </NavbarBrand> */}
+                <Link to='/ForumPage'>Horoscope Forum</Link>
+                <Link to='/UserProfile'>Profile</Link>
+                <Link to='/DailyHoroscope'>Daily Horoscope</Link>
+                <NavItem>
+                    <Button onClick={props.clickLogout}>Logout</Button>
+                </NavItem>
+                <Switch>
+                    <Route exact path='/ForumPage'
+                        render={props => {
+                            <ForumPage {...props} title={`Forum Page`} />
+                        }} />
+                    <Route exact path='/UserPage/:id'
+                        render={props => {
+                            <UserPage {...props} title={`User Page`} />
+                        }} />
+                    <Route exact path='/HoroscopePage'><HoroscopePage /></Route>
+                </Switch>
+
+
+            </Nav>
+            {/* </Collapse> */}
         </Navbar>
     )
 }

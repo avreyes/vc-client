@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Aztro extends Component {
+class DailyHoroscope extends Component {
     constructor(props){
         super(props);
         this.state = {
           json: {},
-          sign: ['aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo', 'libra', 'pisces', 'agittarius', 'scorpio', 'taurus', 'virgo']
+        //   sign: ['aquarius', 'aries', 'cancer', 'capricorn', 'gemini', 'leo', 'libra', 'pisces', 'agittarius', 'scorpio', 'taurus', 'virgo']
         }
     }
 
@@ -33,4 +33,4 @@ class Aztro extends Component {
     }
 }
 
-export default Aztro;
+export default DailyHoroscope;
